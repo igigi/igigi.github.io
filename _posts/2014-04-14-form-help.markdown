@@ -1,0 +1,109 @@
+---
+layout: post
+title:  "view 学习"
+date:   2014-04-14 14:19:34
+categories: rails
+---
+View
+
+'''ruby
+
+<%= form_for(@user) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+'''
+
+默认所有的help在view里可用，如果用在controller里，要显示的include才能用,例如：
+
+'''ruby
+
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+  include SessionsHelper
+end
+
+'''
+
+assets 顺序加载，不按照顺序会导致bootstrap某些组件出问题：
+
+'''ruby
+
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require turbolinks
+//= require_tree .
+
+'''
+无model表单写法：
+1.一般from_for 写法
+'''
+<%= form_for(:session, url: sessions_path) do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Sign in" , class: "btn btn-large btn-primary" %>
+    <% end %>
+'''
+2. form_tag help写法
+
+'''ruby
+
+  <%= form_tag do %>
+    <fieldset>
+      <legend>Please Log In</legend>
+      <div>
+        <%= label_tag :name, 'Name:' %>
+        <%= text_field_tag :name, params[:name] %>
+      </div>
+      <div>
+        <%= label_tag :password, 'Password:' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+      <div>
+        <%= submit_tag "Login" %>
+      </div>
+    </fieldset>
+  <% end %>
+'''
+
+3.Rails 如何实现RESTfull的patch：
+
+'''
+
+<form action="/users/1" class="edit_user" id="edit_user_1" method="post">
+  <input name="_method" type="hidden" value="patch" />
+  .
+  .
+  .
+</form>
+
+'''
+
+从生成的html代码来看，它是通过隐藏表单属性的post方法来实现patch（因为浏览器只有get post方法），服务器通过ActiveRecord的new_record?方法来分辨到底是post请求，还是patch请求：
+
+'''
+$ rails console
+>> User.new.new_record?
+=> true
+>> User.first.new_record?
+=> false
+
+'''
