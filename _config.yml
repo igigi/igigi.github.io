@@ -2,7 +2,7 @@ title:            Rain
 description:      a web engineer and system administrator
 url:              http://igigi.github.io
 signoff:          Rain
-disqus_shortname: raindisqus
+disqus_shortname: igigi
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 
