@@ -7,9 +7,9 @@ facebook_appid:   # appid for like button, remove from /_includes/share.html if 
 google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 
 links:
-  - name:         About
+  - name:         关于
     url:          /about
-  - name:         Blog
+  - name:         博客
     url:          http://igigi.github.io
     external:     true
   - name:         Email
