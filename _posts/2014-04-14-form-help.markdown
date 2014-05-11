@@ -3,6 +3,7 @@ layout: post
 title:  "view 学习"
 date:   2014-04-14 14:19:34
 categories: rails
+disqus: y
 ---
 View
 

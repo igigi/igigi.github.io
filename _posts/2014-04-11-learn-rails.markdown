@@ -3,6 +3,7 @@ layout: post
 title:  "model学习"
 date:   2014-04-11 14:55:34
 categories: rails
+disqus: y
 ---
 Model:
 
@@ -36,3 +37,5 @@ Rails 会对model里的有boolean类型的属自动添加“？”方法
 User.find在没找到用户对象的情况下会报异常(ActiveRecord::RecordNotFound)，而User.where则会返回空对象，不会报异常。
 
 user.any? “对象为空吗？”的意思
+
+**disqus: y**

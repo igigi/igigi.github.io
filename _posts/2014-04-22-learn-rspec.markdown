@@ -3,6 +3,7 @@ layout: post
 title:  "rspec学习"
 date:   2014-04-22 21:37:34
 categories: rails
+disqus: y
 ---
 rspec:
 
