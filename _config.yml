@@ -11,7 +11,7 @@ links:
     url:          /about
   - name:         博客
     url:          http://igigi.github.io
-    external:     true
+    external:     false
   - name:         Email
     url:          mailto:wuyuit@icloud.com
     external:     true
