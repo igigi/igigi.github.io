@@ -5,9 +5,9 @@ date:   2014-04-14 14:19:34
 categories: rails
 disqus: y
 ---
-View
+# View
 
-'''ruby
+'''
 
 <%= form_for(@user) do |f| %>
 
@@ -30,7 +30,7 @@ View
 
 默认所有的help在view里可用，如果用在controller里，要显示的include才能用,例如：
 
-'''ruby
+'''
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
@@ -41,7 +41,7 @@ end
 
 assets 顺序加载，不按照顺序会导致bootstrap某些组件出问题：
 
-'''ruby
+'''
 
 //= require jquery
 //= require jquery_ujs
@@ -51,7 +51,9 @@ assets 顺序加载，不按照顺序会导致bootstrap某些组件出问题：
 
 '''
 无model表单写法：
-1.一般from_for 写法
+
+1. 一般from_for 写法
+
 '''
 <%= form_for(:session, url: sessions_path) do |f| %>
       <%= f.label :email %>
@@ -65,7 +67,7 @@ assets 顺序加载，不按照顺序会导致bootstrap某些组件出问题：
 '''
 2. form_tag help写法
 
-'''ruby
+'''
 
   <%= form_tag do %>
     <fieldset>
@@ -85,7 +87,7 @@ assets 顺序加载，不按照顺序会导致bootstrap某些组件出问题：
   <% end %>
 '''
 
-3.Rails 如何实现RESTfull的patch：
+3. Rails 如何实现RESTfull的patch：
 
 '''
 

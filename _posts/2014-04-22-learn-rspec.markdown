@@ -5,9 +5,9 @@ date:   2014-04-22 21:37:34
 categories: rails
 disqus: y
 ---
-rspec:
+# rspec:
 
-1.没表单头的测试fill_in 写法：
+1. 没表单头的测试fill_in 写法：
 
 '''
 
