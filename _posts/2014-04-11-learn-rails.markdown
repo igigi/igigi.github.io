@@ -1,10 +1,12 @@
 ---
+title: model学习
+date: 2014-04-11 14:55:34 Z
+categories:
+- rails
 layout: post
-title:  "model学习"
-date:   2014-04-11 14:55:34
-categories: rails
 disqus: y
 ---
+
 # Model:
 
 1. 查找对象：

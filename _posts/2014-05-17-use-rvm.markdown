@@ -1,8 +1,9 @@
 ---
+title: RVM日常使用
+date: 2014-05-17 19:51:34 Z
+categories:
+- rails
 layout: post
-title:  "RVM日常使用"
-date:   2014-05-17 19:51:34
-categories: rails
 disqus: y
 ---
 

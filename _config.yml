@@ -1,26 +1,34 @@
-title:            Rain
-description:      a web engineer and system administrator
-url:              http://igigi.github.io
-signoff:          Rain
+---
+title: Rain
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: a web engineer and system administrator
+url: http://igigi.github.io
+signoff: Rain
 disqus_shortname: igigi
-facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
-
+facebook_appid: 
+google_analytics: 
 links:
-  - name:         关于
-    url:          /about
-  - name:         博客
-    url:          http://igigi.github.io
-    external:     false
-  - name:         Email
-    url:          mailto:wuyuit@icloud.com
-    external:     true
-  - name:         GitHub
-    url:          http://github.com/igigi
-    external:     true
-pygments:         true
-permalink:        pretty
-markdown:         redcarpet
+- name: 关于
+  url: "/about"
+- name: 博客
+  url: http://igigi.github.io
+  external: false
+- name: Email
+  url: mailto:wuyuit@icloud.com
+  external: true
+- name: GitHub
+  url: http://github.com/igigi
+  external: true
+pygments: true
+permalink: pretty
+markdown: redcarpet
 redcarpet:
   extensions:
-    - smart
+  - smart
